@@ -1,0 +1,27 @@
+$fz_h1: 3rem;     //48px
+$fz_h2: 2.06rem;  //33px
+$fz_h3: 1.43rem;  //23px
+$fz_h4: 1.18rem;  //19px
+$fz_small: 0.8rem;//13px
+
+$grey_900: rgba(50, 50, 50, 1);
+$grey_700: rgba(86, 86, 86, 1);
+$grey_500: rgba(123, 123, 123, 1);
+$grey_300: rgba(204, 204, 204, 1);
+$grey_100: rgba(244, 244, 244, 1);
+
+@mixin font_h1 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
+  font-size: calc(33px + 15 * (100vw / 1440));
+  letter-spacing: 1.6px;
+}
+
+@mixin font_h3 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
+  font-size: $fz_h3;
+}
+
+//font-family: 'Lato', sans-serif;
+//font-family: 'Red Hat Display', sans-serif;

@@ -1,0 +1,45 @@
+.search {
+  display: inline-block;
+  width: 13%;
+  margin-left: 2rem;
+  float: right;
+  top: 30%;
+  right: 0;
+
+  input {
+    float: left;
+    border: none;
+    height: 20px;
+    width: 8rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    font-family: inherit;
+    color: $grey_500;
+    outline: none;
+    opacity: 0;
+    transition:
+            .5s opacity ease-in-out,
+            .5s border-bottom-color ease-in-out;
+  }
+
+  &__icon {
+    font-size: 1rem;
+    width: 16px;
+    height: 16px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover .search__input {
+    border-bottom: 1px solid #000000;
+    color: $grey_500;
+    width: 8rem;
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,28 @@
+.nav__link {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: $fz_small;
+  line-height: 1;
+  letter-spacing: .3em;
+}
+
+.nav_item {
+  display: inline-block;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.5s opacity ease-in-out;
+  }
+
+  // повинна би реалізуватися поява нижнього підкреслення при active
+  &:active .nav_item:after {
+    opacity: 1;
+  }
+}
+

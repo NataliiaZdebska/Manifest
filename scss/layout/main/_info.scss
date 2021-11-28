@@ -1,0 +1,28 @@
+.info {
+  margin: 127px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__title {
+  width: 43%;
+}
+
+.title_h3 {
+  @include font_h3;
+  letter-spacing: .1em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+.info__description {
+  width: 43%;
+}
+
+.info__text {
+  font-family: "Lato", sans-serif;
+  font-size: $fz_h4;
+  letter-spacing: .06em;
+  line-height: 1.7em;
+  margin-bottom: 1.6em;
+}

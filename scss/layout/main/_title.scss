@@ -1,0 +1,18 @@
+.title__container {
+  width: 63%;
+  margin: 40px auto 128px;
+  float: left;
+}
+
+.title_h1 {
+  @include font_h1;
+}
+
+@media screen and (max-width: 767px) {
+  .title_h1 {
+    font-size: calc(33px + (15 + 15 * .7) * ((100vw - 375px) / 1440));
+  }
+  .title__container {
+    width: 100%;
+  }
+}

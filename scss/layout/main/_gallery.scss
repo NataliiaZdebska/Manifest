@@ -1,0 +1,43 @@
+.gallery {
+  width: 100vw;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img_thin {
+  width: 8.88%;
+}
+
+.img_04:after {
+  content: "Dreamy";
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 16px;
+  letter-spacing: .1em;
+}
+
+.img_wide {
+  width: 37.7%;
+}
+
+.img_02:after {
+  content: "Mixkit Inspo";
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 16px;
+  letter-spacing: .1em;
+}
+
+.img_03:after {
+  content: "Abalone";
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 16px;
+  letter-spacing: .1em;
+}
+
