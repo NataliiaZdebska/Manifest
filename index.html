@@ -6,8 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    <link rel="stylesheet" href="css/style.css">
     <title>Manifest</title>
 </head>
 <body>
@@ -18,15 +17,6 @@
                 <img src="img/logo.svg" alt="logo" class="logo__img">
             </a>
         </div>
-        <div class="header__burger">
-            <span></span>
-        </div>
-        <form class="search">
-            <input type="search" class="search__input" id="search__input" autofocus placeholder="Search">
-            <button type="submit" class=" search__icon">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
         <nav class="header__menu">
             <ul class="header__nav nav">
                 <li class="nav_item">
@@ -44,8 +34,21 @@
                 <li class="nav_item">
                     <a href="#" class="nav__link">contact</a>
                 </li>
+                <li class="nav_item">
+                    <form class="search">
+                        <input type="search" class="search__input" id="search__input" autofocus placeholder="Search">
+                        <label for="search__input">
+                            <button type="submit" class=" search__icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </label>
+                    </form>
+                </li>
             </ul>
         </nav>
+        <div class="header__burger">
+            <span></span>
+        </div>
     </div>
 </header>
 <main>
@@ -71,19 +74,70 @@
     </section>
     <section class="info container">
         <div class="info__title">
-            <h3 class="title_h3">
+            <h3 class="info__title_h3">
                 <p class="position_title">Full-time UI/UX designer</p>
                 <p class="position_description">Head of Design at VeronaLabs.com</p>
             </h3>
             <div class="arrow">
                 <a href="#" class="arrow_open">
-                    <i class="fas fa-long-arrow-alt-right fa-2x arrow_icon"></i>
+                    <i class="fa fa-long-arrow-right fa-1.5x arrow_icon" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
         <div class="info__description">
             <p class="info__text">We work with clients around the world from our headquarters in Charleston, South Carolina.</p>
             <p class="info__text">We focus on naming, branding, brand narratives, website design and development, and brand experiences.</p>
+        </div>
+    </section>
+    <section class="posts container">
+        <div class="posts__title">
+            <h3 class="posts__title_h3">Latest Posts</h3>
+            <div class="see-all">
+                <a href="#" class="arrow_open"> View All
+                    <i class="fa fa-long-arrow-right fa-1.5x arrow_icon" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div class="post__wrapper">
+            <div class="post__block block1">
+                <img src="img/post_img01.png" alt="post_img01" class="post__img post__img_01">
+                <div class="post__text">
+                    <div class="text_top">
+                        <span class="post__suptitle">Interface Design</span>
+                        <span class="post__date">8 June, 2020</span>
+                    </div>
+                    <div class="text_btm">
+                        <h3 class="post__title">UX traffic light colours</h3>
+                        <p class="post__desc">UI has to make a huge visual difference between warning, an alert and a success.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post__block block2">
+                <img src="img/post_img02.png" alt="post_img02" class="post__img post__img_02">
+                <div class="post__text">
+                    <div class="text_top">
+                        <span class="post__suptitle">Technology</span>
+                        <span class="post__date">6 May, 2020</span>
+                    </div>
+                    <div class="text_btm">
+                        <h3 class="post__title">Using UX Design to Build a Sustainable Future</h3>
+                        <p class="post__desc">Transformation has to be driven by everybody, not just by climate groups.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post__block block3">
+                <img src="img/post_img03.png" alt="post_img03" class="post__img post__img_03">
+                <div class="post__text">
+                    <div class="text_top">
+                        <span class="post__suptitle">Visual Design</span>
+                        <span class="post__date">8 June, 2020</span>
+                    </div>
+                    <div class="text_btm">
+                        <h3 class="post__title">Creativity vs. UX</h3>
+                        <p class="post__desc">Is it possible to create a delightful user experience without following best UX practices?</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

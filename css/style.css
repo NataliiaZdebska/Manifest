@@ -39,32 +39,26 @@ a {
 .header {
   width: 100%;
   padding: 10px 0;
-  margin: 86px auto;
+  margin: 3.6em auto;
 }
 
 .header__container {
   font-family: "Lato", sans-serif;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__burger {
   display: none;
 }
 
-.header__menu {
-  float: right;
-  width: 46%;
-  margin-top: -5px;
-}
-
-.header__nav {
-  list-style-type: none;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 @media screen and (max-width: 767px) {
+  .header {
+    margin: 3vw;
+  }
+
   .header__burger {
     display: block;
     position: relative;
@@ -76,8 +70,8 @@ a {
     position: absolute;
     width: 100%;
     height: 2px;
-    left: 0;
     top: 7px;
+    right: 20px;
   }
   .header__burger::before, .header__burger::after {
     content: "";
@@ -85,7 +79,7 @@ a {
     position: absolute;
     width: 100%;
     height: 2px;
-    left: 0;
+    right: 20px;
   }
   .header__burger::before {
     top: 0;
@@ -94,7 +88,7 @@ a {
     bottom: 0;
   }
 
-  .header__menu {
+  .header__menu:not(:last-child) {
     position: fixed;
     top: 0;
     left: 0;
@@ -105,7 +99,7 @@ a {
 }
 .title__container {
   width: 63%;
-  margin: 40px auto 128px;
+  margin: 3em auto 8em;
   float: left;
 }
 
@@ -123,6 +117,7 @@ a {
 
   .title__container {
     width: 100%;
+    margin-bottom: 3em;
   }
 }
 .gallery {
@@ -140,10 +135,10 @@ a {
 .img_04:after {
   content: "Dreamy";
   display: block;
+  font-size: 16px;
   width: 100%;
-  height: 20px;
-  margin-top: 16px;
-  letter-spacing: 0.1em;
+  margin-top: 22px;
+  letter-spacing: 0.13em;
 }
 
 .img_wide {
@@ -153,32 +148,41 @@ a {
 .img_02:after {
   content: "Mixkit Inspo";
   display: block;
+  font-size: 16px;
   width: 100%;
-  height: 20px;
-  margin-top: 16px;
-  letter-spacing: 0.1em;
+  margin-top: 22px;
+  letter-spacing: 0.13em;
 }
 
 .img_03:after {
   content: "Abalone";
   display: block;
+  font-size: 16px;
   width: 100%;
-  height: 20px;
-  margin-top: 16px;
-  letter-spacing: 0.1em;
+  margin-top: 22px;
+  letter-spacing: 0.13em;
 }
 
+@media screen and (max-width: 767px) {
+  .img_thin {
+    display: none;
+  }
+
+  .img_wide {
+    width: 48%;
+  }
+}
 .info {
-  margin: 127px auto;
+  margin: 132px auto 60px;
   display: flex;
   justify-content: space-between;
 }
 
 .info__title {
   width: 43%;
+  margin-bottom: 48px;
 }
-
-.title_h3 {
+.info__title_h3 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 400;
   font-size: 1.43rem;
@@ -194,9 +198,113 @@ a {
 .info__text {
   font-family: "Lato", sans-serif;
   font-size: 1.18rem;
+  color: #565656;
   letter-spacing: 0.06em;
   line-height: 1.7em;
   margin-bottom: 1.6em;
+}
+
+@media screen and (max-width: 767px) {
+  .info {
+    width: 100vw;
+    margin: 3.5em 0.5em 0;
+  }
+  .info__title, .info__description {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+}
+.posts__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.posts__title_h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.43rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+}
+
+.post__wrapper {
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post__block {
+  width: 32%;
+}
+
+.post__img {
+  width: 100%;
+}
+
+.text_top {
+  display: flex;
+  justify-content: space-between;
+  color: #7b7b7b;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  margin: 18px 0;
+  padding: 5px 0;
+}
+
+.text_btm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.43rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+  display: block;
+  height: 4.5em;
+  letter-spacing: 0.1em;
+}
+
+.post__desc {
+  line-height: 1.6em;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #565656;
+}
+
+@media screen and (max-width: 599px) {
+  .posts {
+    margin: 3em 1em;
+  }
+
+  .posts__title,
+.post__wrapper {
+    flex-direction: column;
+  }
+
+  .post__block {
+    width: 95%;
+    margin-bottom: 1em;
+  }
+}
+.header__nav {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav__link {
@@ -209,6 +317,9 @@ a {
 
 .nav_item {
   display: inline-block;
+}
+.nav_item:not(:last-child) {
+  margin-right: 2.7em;
 }
 .nav_item:after {
   content: "";
@@ -228,7 +339,6 @@ a {
   display: inline-block;
   width: 13%;
   margin-left: 2rem;
-  float: right;
   top: 30%;
   right: 0;
 }
@@ -243,13 +353,12 @@ a {
   color: #7b7b7b;
   outline: none;
   opacity: 0;
-  transition: 0.5s opacity ease-in-out, 0.5s border-bottom-color ease-in-out;
+  transition: 0.7s opacity ease-in-out, 1s border-bottom-color ease-in-out;
 }
 .search__icon {
   font-size: 1rem;
   width: 16px;
   height: 16px;
-  float: right;
   position: absolute;
   top: 0;
   right: 0;
@@ -267,6 +376,7 @@ a {
 .header__logo {
   float: left;
   min-width: 134px;
+  margin-right: 4em;
 }
 
 /*# sourceMappingURL=style.css.map */

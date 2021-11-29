@@ -1,3 +1,10 @@
+.header__nav {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav__link {
   text-transform: uppercase;
   color: #000000;
@@ -8,6 +15,10 @@
 
 .nav_item {
   display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 2.7em;
+  }
 
   &:after {
     content: "";

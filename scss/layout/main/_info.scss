@@ -1,18 +1,17 @@
 .info {
-  margin: 127px auto;
+  margin: 132px auto 60px;
   display: flex;
   justify-content: space-between;
 }
 
 .info__title {
   width: 43%;
-}
+  margin-bottom: 48px;
 
-.title_h3 {
+  &_h3 {
   @include font_h3;
-  letter-spacing: .1em;
-  line-height: 1.6em;
   margin-bottom: 1.6em;
+  }
 }
 
 .info__description {
@@ -22,7 +21,27 @@
 .info__text {
   font-family: "Lato", sans-serif;
   font-size: $fz_h4;
+  color: $grey_700;
   letter-spacing: .06em;
   line-height: 1.7em;
   margin-bottom: 1.6em;
+}
+
+@media screen and (max-width: 767px) {
+  .info {
+    width: 100vw;
+    margin: 3.5em .5em 0;
+
+    &__title,
+    &__description{
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+.info {
+  display: flex;
+  flex-direction: column;
+}
 }
